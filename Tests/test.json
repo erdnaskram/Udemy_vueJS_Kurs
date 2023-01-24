@@ -1,0 +1,59 @@
+{
+    "id": 7,
+    "erstellDatum": "",
+    "beschreibung": "",
+    "signatur": "",
+    "studienzuschuss": "",
+    "inventar": "",
+    "kuenstlersozialabgabe": "",
+    "software": "",
+    "studiengang": "",
+    "status": "",
+    "prioritaet": "",
+    "Mitarbeiter_Ersteller": {
+        "id": "",
+        "name": "",
+        "telefonNummer": "",
+        "email": "",
+        "Rolle_id": ""
+    },
+    "Kostenstelle": {
+        "id": "",
+        "bezeichnung": ""
+    },
+    "Kostenart": {
+        "id": "",
+        "bezeichnung": "",
+        "beispiel": "",
+        "syfCode": "",
+        "bemerkung": ""
+    },
+    "Mitarbeiter_Kostentraeger": {
+        "id": "",
+        "name": "",
+        "telefonNummer": "",
+        "email": "",
+        "Rolle_id": ""
+    },
+    "Mitarbeiter_Lieferanschrift": {
+        "id": "",
+        "name": "",
+        "telefonNummer": "",
+        "email": "",
+        "Rolle_id": ""
+    },
+    "Mitarbeiter_Lizenzbeauftragter": {
+        "id": "",
+        "name": "",
+        "telefonNummer": "",
+        "email": "",
+        "Rolle_id": ""
+    },
+    "Mitarbeiter_Rueckfragen": {
+        "id": "",
+        "name": "",
+        "telefonNummer": "",
+        "email": "",
+        "Rolle_id": ""
+    }
+}

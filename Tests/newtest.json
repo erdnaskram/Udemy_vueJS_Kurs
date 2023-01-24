@@ -1,0 +1,93 @@
+{
+    "id": 4,
+    "erstellDatum": "2011-12-17",
+    "beschreibung": "pb neural int porcelain viewers",
+    "signatur": null,
+    "studienzuschuss": true,
+    "inventar": false,
+    "kuenstlersozialabgabe": true,
+    "software": false,
+    "studiengang": "Informatik",
+    "status": 0,
+    "prioritaet": 1,
+    "Mitarbeiter_Ersteller": {
+        "id": 2,
+        "name": "Lourdes Jones",
+        "telefonNummer": "+51-2648-857-257",
+        "email": "tomasa-blackwood034@yahoo.com\r"
+    },
+    "Kostenstelle": {
+        "id": 29,
+        "kostenstelleNummer": 2330300,
+        "bezeichnung": "Lab EDV-Ausbildungsz. BWL\r"
+    },
+    "Kostenart": {
+        "id": 60006,
+        "bezeichnung": "AV Medien",
+        "beispiel": "Audio-CD, Veo-DVD, AV-Medienkombinationen\r"
+    },
+    "Kostentraeger": {
+        "id": 19,
+        "kostentraegerNummer": 23122,
+        "beschreibung": "BayIntAn-PhD-Programm\r"
+    },
+    "Mitarbeiter_Lieferanschrift": {
+        "id": 21,
+        "name": "Myrtie Still",
+        "telefonNummer": "+48-2721-369-569",
+        "email": "nathanialsnell1350@gmail.com\r"
+    },
+    "Mitarbeiter_Lizenzbeauftragter": {
+        "id": 0
+    },
+    "Mitarbeiter_Rueckfragen": {
+        "id": 30,
+        "name": "Bell Silas",
+        "telefonNummer": "+505-6080-480-623",
+        "email": "elainapeltier@hotmail.com"
+    },
+    "angebote": [
+        {
+            "id": 2,
+            "angebotNummer": 81862,
+            "kundenNummer": 53514,
+            "summe": 73.47,
+            "gueltigBis": "2000-06-11",
+            "brutto": 75.73,
+            "datum": "2021-07-26",
+            "versandkosten": 21.24,
+            "rabatt": 2,
+            "skonto": 2,
+            "endSumme": 74.06,
+            "pdf": "",
+            "Antrag_id": 4,
+            "Lieferant": {
+                "id": 11,
+                "name": "H. Gautzsch Großhandel GmbH & CO KG",
+                "ort": "Passau",
+                "strasse": "Messestr.",
+                "hausnummer": "2",
+                "plz": 94036,
+                "adresszusatz": null,
+                "fax": "0851/966288-4449"
+            },
+            "positionen": [
+                {
+                    "id": 1,
+                    "gesamtpreis": 43.62,
+                    "menge": 21,
+                    "Angebot_id": 2,
+                    "artikel": {
+                        "id": 21,
+                        "bezeichnung": "FUNSCH",
+                        "einheit": "Stück",
+                        "mwst": 0,
+                        "artikelNummer": 12869,
+                        "preis": 11.87,
+                        "Lieferant_id": 12
+                    }
+                }
+            ]
+        }
+    ]
+}
