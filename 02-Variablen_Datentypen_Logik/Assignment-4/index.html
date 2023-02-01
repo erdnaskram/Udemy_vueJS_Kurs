@@ -14,22 +14,16 @@
   </head>
   <body id="app">
     <header>
-      <h1>Vue Dynamic Styling</h1>
+      <h1>Vue Styling</h1>
     </header>
-    <section id="styling">
-      <div
-        class="demo"
-        :class="boxAClasses"
-        @click="boxSelected('A')"
-      ></div>
-      <div
-        :class="['demo', {active: boxBSelected}]"
-        @click="boxSelected('B')"
-      ></div>
-      <div
-        :class="{demo: true, active: boxCSelected}"
-        @click="boxSelected('C')"
-      ></div>
+    <section id="assignment">
+      <input type="text" v-model="userInput" />
+
+      <p :class="paragraphClasses">Style me!</p>
+      <button @click="toggleParagraph">Toggle Paragraph</button>
+
+      <input type="text" v-model="userColor" />
+      <p :style="{backgroundColor: userColor}">Style me inline!</p>
     </section>
   </body>
 </html>
