@@ -10,6 +10,7 @@ const app = Vue.createApp({
       currentRound: 0,
       specialAttackCoolDown: 0,
       winner: null,
+      logMessages: [],
     };
   },
   watch: {
@@ -37,14 +38,45 @@ const app = Vue.createApp({
     playerBarStyles() {
       return { width: this.playerHealth + "%" };
     },
-    mayUseSpecialAttack() {
-      return this.specialAttackCoolDown !== 0;
+    isAttackDisable(){
+      return this.winner != null;
     },
+    isSpecialAttackDisable(){
+      return this.winner != null || this.specialAttackCoolDown !== 0;
+    },
+    isHealDisable(){
+      return this.winner != null;
+    },
+    isSurrenderDisable(){
+      return this.winner != null;
+    }
   },
   methods: {
+    //Automatic Functions
     increaseRound() {
       this.currentRound++;
       if (this.specialAttackCoolDown > 0) this.specialAttackCoolDown--;
+    },
+    attackPlayer() {
+      const attackValue = getRandomValue(8, 15);
+
+      if (this.playerHealth - attackValue < 0)
+        this.playerHealth = 0;
+      else this.playerHealth -= attackValue;
+
+      this.addLogMessage('monster','attack',attackValue);
+    },
+
+    //Buttoncontrolls
+    startGame(){
+      this.playerHealth = 100;
+      this.monsterHealth = 100;
+      this.currentRound = 0;
+      this.specialAttackCoolDown = 0;
+      this.winner = null;
+      this.logMessages = [];
+
+      //this.addLogMessage('player','started new game','');
     },
     attackMonster() {
       this.increaseRound();
@@ -54,8 +86,9 @@ const app = Vue.createApp({
         this.monsterHealth = 0;
       else this.monsterHealth -= attackValue;
 
-      console.log(this.monsterHealth);
       this.attackPlayer();
+
+      this.addLogMessage('player','attack',attackValue);
     },
     specialAttackMonster() {
       this.increaseRound();
@@ -67,21 +100,34 @@ const app = Vue.createApp({
       else this.monsterHealth -= attackValue;
 
       this.attackPlayer();
+
+      this.addLogMessage('player','special-attack',attackValue);
     },
     healPlayer() {
       this.increaseRound();
       const healValue = getRandomValue(8, 20);
       if (this.playerHealth + healValue <= 100) this.playerHealth += healValue;
       else this.playerHealth = 100;
-      this.attackPlayer();
-    },
-    attackPlayer() {
-      const attackValue = getRandomValue(8, 15);
 
-      if (this.playerHealth - attackValue < 0)
-        this.playerHealth = 0;
-      else this.playerHealth -= attackValue;
+      this.attackPlayer();
+
+      this.addLogMessage('player','heal', healValue);
     },
+    surrenderGame() {
+      this.winner = "monster";
+
+      this.addLogMessage('player','surrendered','');
+    },
+
+    //open Functions
+    addLogMessage(who, what, value) {
+      this.logMessages.unshift({
+        actionBy: who,
+        actionType: what,
+        actionValue: value,
+        actionRound: this.currentRound
+      });
+    }
   },
 });
 
