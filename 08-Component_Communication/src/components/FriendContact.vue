@@ -9,6 +9,7 @@
       <li><strong>Phone:</strong> {{ phone }}</li>
       <li><strong>Email:</strong> {{ email }}</li>
     </ul>
+    <button v-if="detailsAreVisible" @click="deleteFriend">Delete</button>
   </li>
 </template>
 
@@ -41,6 +42,15 @@ export default {
       },
     },
   },
+  emits: {
+    "toggle-favorite": function (friendId) {
+      if (friendId) {
+        return true;
+      }
+      console.warn("No friend id provided!");
+      return false;
+    },
+  },
   data() {
     return {
       detailsAreVisible: false,
@@ -53,9 +63,9 @@ export default {
     toggleFavorite() {
       this.$emit("toggle-favorite", this.id);
     },
+    deleteFriend() {
+      this.$emit("delete-friend", this.id);
+    },
   },
 };
 </script>
-
-<style>
-</style>
