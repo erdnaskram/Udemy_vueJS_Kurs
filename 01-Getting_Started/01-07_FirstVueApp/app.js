@@ -1,10 +1,15 @@
 
-// import antraege from './data/antraege.json' assert {type: 'json'};
-// console.log(antraege);
+// Importiere Bootstrap und BootstrapVue
 
+import { createApp } from 'vue';
+import { BootstrapVue } from 'bootstrap-vue';
+
+// Importiere Bootstrap und BootstrapVue CSS
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 //? mit vue
-Vue.createApp({
+const app = createApp({
     data() {
         return {
             goals: [],
@@ -18,8 +23,14 @@ Vue.createApp({
             this.goals.push(this.enteredValue);
         }
     }
-}).mount("#app");
+})
 
+
+// Verwende BootstrapVue
+app.use(BootstrapVue);
+
+// Mounte deine Vue-Anwendung
+app.mount("#app");
 
 
 

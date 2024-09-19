@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <section id="tasks">
+      <h2>Aufgaben</h2>
+      <ol>
+        <li>
+          Fügen Sie der App zwei Komponenten hinzu:
+          <ul>
+            <li>Eine ActiveUser-Komponente und eine UserData-Komponente</li>
+            <li>
+              ActiveUser sollte einen Benutzernamen (h2) und ein Alter (h3)
+              ausgeben
+            </li>
+            <li>
+              UserData sollte zwei Eingabefelder ausgeben => für Name und Alter
+            </li>
+            <li>Optional: Fügen Sie ein Styling Ihrer Wahl hinzu</li>
+          </ul>
+        </li>
+        <li>
+          Geben Sie beide Komponenten nebeneinander in Ihrer Haupt-App-Vorlage
+          aus
+        </li>
+        <li>
+          Fügen Sie Benutzerdaten hinzu und stellen Sie sicher, dass sie einen
+          Namen und ein Alter enthalten
+          <ul>
+            <li>Benutzerdaten sollten in ActiveUser ausgegeben werden</li>
+            <li>
+              Sie sollten über die UserData-Komponente aktualisiert werden
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <style>
+      #tasks {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+      #tasks h2 {
+        margin-bottom: 10px;
+      }
+      #tasks ol {
+        padding-left: 20px;
+      }
+      #tasks li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </body>
+</html>
