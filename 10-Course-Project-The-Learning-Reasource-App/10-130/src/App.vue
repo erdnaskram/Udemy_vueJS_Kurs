@@ -1,24 +1,20 @@
 <template>
   <section>
     <the-header title="RememberMe"></the-header>
-    <stored-resources :courses="courses" />
+    <the-resources></the-resources>
   </section>
 </template>
 
 <script>
-import StoredResources from './components/learning-resources/StoredResources.vue'
+import TheHeader from './components/layouts/TheHeader.vue';
+import TheResources from './components/learning-resources/TheResources.vue';
 export default {
   components: {
-    StoredResources
+    TheHeader,
+    TheResources
   },
   data() {
     return {
-      courses: [
-        { id: "oficial-guide", title: "Official Guide", description: "The official guide to the learning resource app", link: "https://vuejs.org" },
-        { id: "vue-mastery", title: "Vue Mastery", description: "The official guide to the learning resource app", link: "https://vue-mastery.com" },
-        { id: "vue-school", title: "Vue School", description: "The official guide to the learning resource app", link: "https://vue-school.com" },
-        { id: "google", title: "Google", description: "The official guide to the learning resource app", link: "https://google.com" },
-      ]
     }
   }
 }

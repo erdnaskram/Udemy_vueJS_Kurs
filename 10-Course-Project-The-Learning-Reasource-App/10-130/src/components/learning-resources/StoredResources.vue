@@ -1,6 +1,6 @@
 <template>
     <ul>
-      <learning-resource-item v-for="course in courses" :key="course.id" :title="course.title"
+      <learning-resource-item v-for="course in courses" :key="course.id" :id="course.id" :title="course.title"
         :description="course.description" :link="course.link">
       </learning-resource-item>
     </ul>
@@ -13,7 +13,7 @@ export default {
     components: {
         LearningResourceItem
     },
-    props: {
+    inject: {
         courses: {
             type: Array,
             required: true
